@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+nhập bán kính hình tròn
+<input type="text" id="inputRadius"/>
+<button type="button" onclick="check()">kết quả</button>
+diện tích hình tròn
+<input type="text" disabled id="value1"/>
+chu vi hình tròn
+<input type="text" disabled id="value2"/>
+<script>
+    const PI = 3.14;
+    let radius;
+
+    function check() {
+        radius = parseFloat(document.getElementById("inputRadius").value);
+        let cv = 2 * PI * radius;
+        let dt = PI * radius * radius;
+        document.getElementById("value1").value = cv;
+        document.getElementById("value2").value = dt;
+    }
+</script>
+</body>
+</html>
